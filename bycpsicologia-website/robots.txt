@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bycpsicologia.com/sitemap.xml
+
+# Crawl-delay para ser respetuosos con los servidores
+Crawl-delay: 1
+
+# Permitir indexación completa del sitio
+# Sitio de psicología profesional de Beatriz Corchado

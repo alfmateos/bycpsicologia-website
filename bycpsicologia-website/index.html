@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Psicología Beatriz Corchado - Acompañamiento en Maternidad y Cambios Vitales</title>
+  <base href="/">
+  
+  <!-- Meta etiquetas esenciales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Psicología con Beatriz Corchado: acompañamiento emocional en maternidad, cambios vitales y terapia familiar. Un espacio seguro para tu bienestar.">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="author" content="Beatriz Corchado">
+  <meta name="keywords" content="psicología, terapia, Beatriz Corchado, maternidad, psicología perinatal, terapia familiar, cambios vitales, bienestar emocional">
+
+  <!-- Meta etiquetas adicionales para SEO -->
+  <meta name="language" content="es">
+  <meta name="geo.region" content="ES-MD">
+  <meta name="geo.placename" content="Madrid">
+  <link rel="canonical" href="https://bycpsicologia.com">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Psicología Beatriz Corchado - Acompañamiento en Maternidad y Cambios Vitales">
+  <meta property="og:description" content="Psicología con Beatriz Corchado: acompañamiento emocional en maternidad, cambios vitales y terapia familiar. Un espacio seguro para tu bienestar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bycpsicologia.com">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/logo/logo-3.png">
+  <link rel="apple-touch-icon" href="/assets/logo/logo-3.png">
+  
+  <!-- Preconexión para mejorar la carga de fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'roboto': ['Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .hero-video {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-video video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+    
+    /* Colores personalizados - Nueva paleta */
+    .bg-primary { background-color: #8CAAB9; } /* Azul empolvado */
+    .bg-secondary { background-color: #F5EFE6; } /* Beige claro */
+    .bg-light { background-color: #FCFAF8; } /* Blanco roto */
+    .bg-lighter { background-color: #FCFAF8; } /* Blanco roto */
+    .text-primary { color: #8CAAB9; } /* Azul empolvado */
+    .text-dark { color: #4a4a4a; } /* Gris oscuro suave */
+    .hover-primary:hover { background-color: #A8BFA4; } /* Verde salvia al hover */
+
+    /* Colores adicionales */
+    .bg-sage { background-color: #A8BFA4; } /* Verde salvia */
+    .text-sage { color: #A8BFA4; }
+    .text-brown-soft { color: #D4C4B7; } /* Marrón suave */
+    .bg-brown-soft { background-color: #D4C4B7; }
+    .text-brown-dark { color: #4E3629; } /* Marrón oscuro para títulos */
+    .text-off-white { color: rgb(234, 230, 225); } /* Blanco roto personalizado */
+    .text-nav-brown { color: rgb(78, 54, 41); } /* Color específico para navegación */
+    .hover-nav-green:hover { color: #A8BFA4; } /* Verde salvia para hover en navegación */
+
+    /* Estilos para tarjetas de servicios */
+    .services-card {
+      font-family: 'Roboto', sans-serif;
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+
+    .services-card h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #5e4634;
+      margin-bottom: 8px;
+    }
+
+    .services-card p {
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #5a5a5a;
+    }
+
+    /* Estilo para textos secundarios */
+    .texto-secundario {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #6c6863;
+      line-height: 1.7;
+    }
+
+    /* Overlay personalizado con 23% de opacidad */
+    .bg-opacity-23 {
+      background-color: rgba(0, 0, 0, 0.23);
+    }
+    
+    /* Animaciones suaves */
+    .transition-all { transition: all 0.3s ease; }
+
+    /* Compensación para header fijo */
+    section[id] {
+      scroll-margin-top: 100px;
+    }
+
+    /* Opacidad personalizada */
+    .bg-opacity-17 { background-color: rgba(0, 0, 0, 0.17); }
+  </style>
+</head>
+
+<body class="font-sans">
+  <!-- Header -->
+  <header id="header" class="fixed w-full bg-transparent z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 flex justify-start items-center py-2 md:py-4">
+      <a href="#hero" class="flex items-center space-x-2 mr-8">
+        <img src="/assets/logo/logo-3.png" alt="Logo" class="h-14 md:h-20 w-auto rounded-lg">
+      </a>
+      
+      <!-- Navegación Desktop -->
+      <nav class="hidden lg:flex items-center space-x-8">
+        <a href="#hero" class="text-off-white hover:text-gray-300 transition-all">Inicio</a>
+        <a href="#accompany" class="text-off-white hover:text-gray-300 transition-all">Te acompaño</a>
+        <a href="#about" class="text-off-white hover:text-gray-300 transition-all">Sobre mí</a>
+        <a href="#services" class="text-off-white hover:text-gray-300 transition-all">Servicios</a>
+        <a href="#pricing" class="text-off-white hover:text-gray-300 transition-all">Tarifas</a>
+      </nav>
+      
+      <!-- Botón Contacto -->
+      <div class="flex items-center space-x-4 ml-auto">
+        <a href="#contact" class="hidden lg:block bg-sage text-white py-3 px-6 rounded-lg font-medium hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all">
+          Contacto
+        </a>
+        
+        <!-- Menú móvil -->
+        <div class="relative lg:hidden">
+          <button id="mobile-menu-btn" class="focus:outline-none">
+            <img src="/assets/icons/menu.svg" alt="Menú" class="h-8 w-8">
+          </button>
+          <div id="mobile-menu" class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg z-40 transition-opacity duration-300 overflow-hidden opacity-0 pointer-events-none scale-95">
+            <a href="#hero" class="block px-5 py-3 text-brown-dark hover:text-gray-600 hover:bg-gray-50 border-b border-gray-200">Inicio</a>
+            <a href="#accompany" class="block px-5 py-3 text-brown-dark hover:text-gray-600 hover:bg-gray-50 border-b border-gray-200">Te acompaño</a>
+            <a href="#about" class="block px-5 py-3 text-brown-dark hover:text-gray-600 hover:bg-gray-50 border-b border-gray-200">Sobre mí</a>
+            <a href="#services" class="block px-5 py-3 text-brown-dark hover:text-gray-600 hover:bg-gray-50 border-b border-gray-200">Servicios</a>
+            <a href="#pricing" class="block px-5 py-3 text-brown-dark hover:text-gray-600 hover:bg-gray-50 border-b border-gray-200">Tarifas</a>
+            <a href="#contact" class="block bg-sage text-white text-center font-semibold py-3 px-5 rounded-b-lg hover:bg-primary">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección Hero -->
+    <section id="hero" class="hero-video relative h-screen flex justify-center items-center">
+      <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
+        <source src="/assets/videos/video-familia.mp4" type="video/mp4">
+        <!-- Fallback para navegadores que no soportan video -->
+        Tu navegador no soporta videos HTML5.
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-25"></div>
+      <div class="relative z-10 max-w-4xl px-4 text-center mx-auto h-full flex flex-col justify-center">
+        <!-- Textos: MUY cerca por ARRIBA de la familia -->
+        <div class="space-y-3 mb-6">
+          <blockquote class="text-2xl md:text-4xl font-light italic leading-relaxed mb-3 text-off-white">
+            "Cuando no podemos cambiar una situación, tenemos el desafío de cambiarnos a nosotros mismos."
+          </blockquote>
+          <p class="text-lg md:text-xl font-medium mb-4 text-off-white">– Viktor Frankl</p>
+
+          <p class="text-xl md:text-2xl font-medium text-off-white">
+            La vida es cambio, cada etapa tiene su propio aprendizaje.
+          </p>
+        </div>
+
+        <!-- Espaciador mínimo: solo el espacio justo de la familia -->
+        <div class="h-[180px] md:h-[200px]"></div>
+
+        <!-- Botón: MUY cerca por DEBAJO de la familia -->
+        <div class="flex justify-center mt-6">
+          <a href="#accompany" class="inline-flex items-center bg-sage text-white py-3 px-6 rounded-lg font-medium hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all">
+            Conoce más <span class="ml-2">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Te acompaño -->
+    <section id="accompany" class="bg-white py-16 md:py-24">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-normal text-center text-brown-dark mb-16 font-roboto tracking-wide">Te acompaño</h2>
+      </div>
+      <div class="container mx-auto px-6 md:px-12 flex flex-wrap md:flex-nowrap items-center gap-y-12 md:gap-x-16">
+        <div class="w-full md:w-1/2 order-1 md:order-1 flex justify-center md:justify-start">
+          <div class="max-w-xl">
+            <img src="/assets/images/mother-child-back.jpg" alt="Madre e hijo" class="w-full h-auto object-cover rounded-lg shadow-md">
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 order-2 md:order-2 text-center md:text-left">
+          <div class="space-y-8">
+            <p class="text-2xl md:text-3xl font-light leading-relaxed mb-8 texto-secundario">
+              La maternidad, la adolescencia de los hijos, los conflictos familiares, las separaciones… Cada transición nos invita a descubrirnos y reinventarnos.
+            </p>
+            <p class="text-lg md:text-xl leading-relaxed mb-8 texto-secundario">
+              Aquí encontrarás un espacio seguro para comprenderte y adaptarte a estos momentos de cambio. Un lugar donde sanar, reconectar contigo misma y recuperar tu equilibrio emocional.
+            </p>
+            <p class="text-lg md:text-xl leading-relaxed font-medium texto-secundario">
+              Porque no estás sola.<br>
+              Porque cada etapa trae su propio aprendizaje.<br>
+              Y porque mereces vivir cada proceso con serenidad, consciencia y esperanza.
+            </p>
+
+            <p class="text-lg md:text-xl leading-relaxed font-bold texto-secundario">
+              Te acompaño en el camino.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Sobre mí -->
+    <section id="about" class="bg-secondary py-16 md:py-24">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-normal text-center text-brown-dark mb-16 font-roboto tracking-wide">Sobre mí</h2>
+      </div>
+      <div class="container mx-auto px-6 md:px-12 flex flex-wrap md:flex-nowrap items-center gap-y-12 md:gap-x-16">
+        <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center md:justify-end">
+          <div class="rounded-full overflow-hidden max-w-xs md:max-w-sm">
+            <img src="/assets/images/byc-photo.png" alt="Beatriz Corchado" class="w-full h-auto object-cover">
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left">
+          <p class="text-lg mb-6 md:mb-8 texto-secundario">
+            Soy <strong>Beatriz Corchado</strong>, psicóloga y Máster en Psicología General Sanitaria.
+          </p>
+          <p class="text-lg mb-6 md:mb-8 texto-secundario">
+            Antes de la psicología, mi gran vocación fue la maternidad. Tengo tres hijos jóvenes que me enseñaron que ser madre es una experiencia transformadora para la que nadie nos prepara realmente. Tras atravesar vivencias maravillosas y desafíos difíciles, decidí que quería estar al lado de otras madres y padres para acompañarlos en su camino vital.
+          </p>
+          <p class="text-lg texto-secundario">
+            Hoy, mi propósito es escucharte, acompañarte y ayudarte a atravesar los cambios y dificultades que puedas estar experimentando.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="services" class="bg-white py-16 md:py-24">
+      <div class="container mx-auto px-6 md:px-12">
+        <h2 class="text-4xl font-normal text-brown-dark mb-12 text-center font-roboto tracking-wide">Servicios</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-lighter p-6 rounded-lg shadow-md services-card">
+            <h3>Psicología perinatal</h3>
+            <p>Depresión postparto, comunicación con el bebé, duelo gestacional, stillbirth, ansiedad perinatal, crianza respetuosa, bienestar emocional en la díada madre-bebé.</p>
+          </div>
+          <div class="bg-lighter p-6 rounded-lg shadow-md services-card">
+            <h3>Terapia de pareja en el periodo perinatal</h3>
+            <p>Gestión de las emociones y cambios, salud mental y emocional de la pareja, apoyo en la preconcepción, gestación, postparto y crianza, fortalecimiento de la parentalidad.</p>
+          </div>
+          <div class="bg-lighter p-6 rounded-lg shadow-md services-card">
+            <h3>Terapia familiar</h3>
+            <p>Abordaje de las dinámicas familiares, conflictos en la convivencia, roles de crianza saludables, estrategias de afrontamiento.</p>
+          </div>
+          <div class="bg-lighter p-6 rounded-lg shadow-md services-card">
+            <h3>Ansiedad y depresión en el ciclo vital</h3>
+            <p>Terapia cognitivo conductual, terapia de aceptación y compromiso, terapia de mentalización.</p>
+          </div>
+          <div class="bg-lighter p-6 rounded-lg shadow-md md:col-span-2 lg:col-span-1 services-card">
+            <h3>Periodo de la adultez y vejez</h3>
+            <p>Relación con los hijos adultos, nido vacío, acompañamiento a familiares, bienestar del cuidador, duelo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Tarifas -->
+    <section id="pricing" class="bg-secondary py-16">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-normal text-brown-dark mb-4 font-roboto tracking-wide">Tarifas</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Tarjeta Sesión Individual -->
+          <div class="bg-white shadow-md rounded-lg p-6 flex flex-col">
+            <h3 class="text-center text-xl font-medium text-black mb-4">Sesión Individual</h3>
+            <p class="text-center text-4xl font-bold text-primary mb-4">60€</p>
+            <hr class="border-gray-300 mb-6">
+            <ul class="space-y-4 mb-6">
+              <li class="flex items-center">
+                <img src="/assets/icons/check.svg" alt="Ícono de verificación" class="h-5 w-5 mr-2">
+                <span class="text-black">60 minutos aprox.</span>
+              </li>
+              <li class="flex items-center">
+                <img src="/assets/icons/check.svg" alt="Ícono de verificación" class="h-5 w-5 mr-2">
+                <span class="text-black">Presencial u online</span>
+              </li>
+            </ul>
+            <p class="text-left text-black mb-6 text-sm flex-grow">
+              Espacio seguro para el autoconocimiento y crecimiento personal. Terapia adaptada a tus necesidades específicas.
+            </p>
+            <div class="text-center mt-6">
+              <a href="mailto:bycpsicologia@gmail.com?subject=Reserva%20de%20sesión%20individual&body=Hola%2C%20me%20gustaría%20reservar%20una%20sesión%20individual.%20Por%20favor%2C%20indíqueme%20los%20pasos%20a%20seguir." class="bg-sage text-white py-3 px-6 rounded-lg font-medium hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all">
+                Quiero reservar
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta Sesión de Pareja -->
+          <div class="bg-white shadow-md rounded-lg p-6 flex flex-col">
+            <h3 class="text-center text-xl font-medium text-black mb-4">Sesión de Pareja</h3>
+            <p class="text-center text-4xl font-bold text-primary mb-4">80€</p>
+            <hr class="border-gray-300 mb-6">
+            <ul class="space-y-4 mb-6">
+              <li class="flex items-center">
+                <img src="/assets/icons/check.svg" alt="Ícono de verificación" class="h-5 w-5 mr-2">
+                <span class="text-black">60 minutos aprox.</span>
+              </li>
+              <li class="flex items-center">
+                <img src="/assets/icons/check.svg" alt="Ícono de verificación" class="h-5 w-5 mr-2">
+                <span class="text-black">Presencial u online</span>
+              </li>
+            </ul>
+            <p class="text-left text-black mb-6 text-sm flex-grow">
+              Fortalecimiento de la relación durante etapas de cambio. Comunicación y apoyo mutuo en la pareja.
+            </p>
+            <div class="text-center mt-6">
+              <a href="mailto:bycpsicologia@gmail.com?subject=Reserva%20de%20sesión%20de%20pareja&body=Hola%2C%20me%20gustaría%20reservar%20una%20sesión%20de%20pareja.%20Por%20favor%2C%20indíqueme%20los%20pasos%20a%20seguir." class="bg-sage text-white py-3 px-6 rounded-lg font-medium hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all">
+                Quiero reservar
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta Sesión Familiar -->
+          <div class="bg-white shadow-md rounded-lg p-6 flex flex-col">
+            <h3 class="text-center text-xl font-medium text-black mb-4">Sesión Familiar</h3>
+            <p class="text-center text-4xl font-bold text-primary mb-4">80€</p>
+            <hr class="border-gray-300 mb-6">
+            <ul class="space-y-4 mb-6">
+              <li class="flex items-center">
+                <img src="/assets/icons/check.svg" alt="Ícono de verificación" class="h-5 w-5 mr-2">
+                <span class="text-black">60 minutos aprox.</span>
+              </li>
+              <li class="flex items-center">
+                <img src="/assets/icons/check.svg" alt="Ícono de verificación" class="h-5 w-5 mr-2">
+                <span class="text-black">Presencial u online</span>
+              </li>
+            </ul>
+            <p class="text-left text-black mb-6 text-sm flex-grow">
+              Mejora de la convivencia familiar y resolución de conflictos. Dinámicas saludables para toda la familia.
+            </p>
+            <div class="text-center mt-6">
+              <a href="mailto:bycpsicologia@gmail.com?subject=Reserva%20de%20sesión%20familiar&body=Hola%2C%20me%20gustaría%20reservar%20una%20sesión%20familiar.%20Por%20favor%2C%20indíqueme%20los%20pasos%20a%20seguir." class="bg-sage text-white py-3 px-6 rounded-lg font-medium hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all">
+                Quiero reservar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <p class="text-lg font-medium texto-secundario">¿Colectivos vulnerables? Pregúntame por precios especiales</p>
+          <p class="text-lg font-medium texto-secundario">Primer contacto telefónico o por mail sin coste</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="bg-light py-16">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-8">
+          <h2 class="text-4xl font-normal text-brown-dark leading-tight mb-4 font-roboto tracking-wide">¿Hablamos sobre lo que necesitas?</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <div class="bg-white shadow-lg rounded-lg p-8">
+            <h3 class="text-2xl font-semibold text-dark mb-6">Formulario de contacto</h3>
+            <form class="space-y-4" action="mailto:bycpsicologia@gmail.com" method="post" enctype="text/plain">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Nombre *</label>
+                <input type="text" name="nombre" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                <input type="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono (opcional)</label>
+                <input type="tel" name="telefono" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Mensaje *</label>
+                <textarea name="mensaje" required rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-sage text-white py-3 px-6 rounded-lg font-medium hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all">
+                Enviar mensaje
+              </button>
+            </form>
+          </div>
+          <div class="space-y-6">
+            <div class="bg-white shadow-lg rounded-lg p-6">
+              <h3 class="text-xl font-semibold text-dark mb-4">Datos de contacto</h3>
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <span class="text-2xl mr-3">📞</span>
+                  <a href="tel:+34610576297" class="text-dark hover-primary transition-all">+34 610576297</a>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-2xl mr-3">📧</span>
+                  <a href="mailto:bycpsicologia@gmail.com" class="text-dark hover-primary transition-all">bycpsicologia@gmail.com</a>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-2xl mr-3 mt-1">📍</span>
+                  <div class="text-dark">
+                    <div class="font-medium">Dirección:</div>
+                    <div>MEDILOG</div>
+                    <div>Calle Arturo Soria 144</div>
+                    <div>28043 MADRID</div>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-6 h-6 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                  <a href="https://www.linkedin.com/in/beatriz-corchado-93a913282/" target="_blank" rel="noopener noreferrer" class="text-dark hover-primary transition-all">LinkedIn</a>
+                </div>
+                <div class="flex items-center">
+                  <img src="/assets/icons/doctoralia.png" alt="Doctoralia" class="w-6 h-6 mr-3 object-contain">
+                  <a href="https://www.doctoralia.es/beatriz-corchado-de-frutos/psicologo/madrid" target="_blank" rel="noopener noreferrer" class="text-dark hover-primary transition-all">Doctoralia</a>
+                </div>
+                <div class="flex items-center">
+                  <img src="/assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6 mr-3">
+                  <a href="https://www.instagram.com/bycpsicologia/" target="_blank" rel="noopener noreferrer" class="text-dark hover-primary transition-all">Instagram</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-lighter py-16">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 items-center justify-items-center">
+        <div class="flex flex-col items-center md:items-center">
+          <img src="/assets/logo/logo-3.png" alt="Logo" class="h-20 mb-4 rounded-lg">
+        </div>
+        <div class="flex flex-col items-center md:items-center">
+          <img src="/assets/icons/colegio-psicologia-madrid.png" alt="Colegio de Psicólogos de Madrid" class="h-20 mb-4 rounded-lg">
+        </div>
+        <div class="text-center">
+          <h3 class="text-lg font-semibold text-dark mb-4">Contacto</h3>
+          <ul class="space-y-2">
+            <li class="text-dark">
+              Teléfono: <a href="tel:+34610576297" class="hover-primary transition-all">+34 610 576 297</a>
+            </li>
+            <li class="text-dark">
+              Email: <a href="mailto:bycpsicologia@gmail.com" class="hover-primary transition-all">bycpsicologia@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="text-center">
+          <h3 class="text-lg font-semibold text-dark mb-4">Psicología Beatriz Corchado</h3>
+          <p class="text-dark">Acompañamiento emocional en maternidad y cambios vitales</p>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-gray-200 pt-6 text-center">
+        <p class="text-sm text-dark">
+          ©2025 Psicología Beatriz Corchado | Número de colegiada: M-40164 | Este sitio no utiliza cookies.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript para menú móvil y header dinámico -->
+  <script>
+    // Menú móvil
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('opacity-0');
+      menu.classList.toggle('pointer-events-none');
+      menu.classList.toggle('scale-95');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.add('opacity-0');
+        menu.classList.add('pointer-events-none');
+        menu.classList.add('scale-95');
+      });
+    });
+
+    // Header dinámico que cambia al hacer scroll
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      const heroSection = document.getElementById('hero');
+      const heroHeight = heroSection.offsetHeight;
+
+      if (window.scrollY > heroHeight * 0.1) { // Cambia cuando scroll 10% del hero
+        header.classList.remove('bg-transparent');
+        header.classList.add('bg-light', 'shadow-md');
+
+        // Cambiar color de texto de navegación al marrón específico
+        const navLinks = header.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+          link.classList.remove('text-off-white', 'hover:text-gray-300');
+          link.classList.add('text-nav-brown', 'hover-nav-green');
+        });
+
+        // El botón de contacto mantiene siempre el color verde salvia
+      } else {
+        header.classList.remove('bg-light', 'shadow-md');
+        header.classList.add('bg-transparent');
+
+        // Restaurar color de texto original a blanco roto
+        const navLinks = header.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+          link.classList.remove('text-nav-brown', 'hover-nav-green');
+          link.classList.add('text-off-white', 'hover:text-gray-300');
+        });
+
+        // El botón de contacto mantiene siempre el color verde salvia
+      }
+    });
+
+    // Datos estructurados de Schema.org
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Beatriz Corchado",
+      "description": "Psicóloga especializada en maternidad, psicología perinatal, terapia familiar y acompañamiento en cambios vitales.",
+      "url": "https://bycpsicologia.com",
+      "jobTitle": "Psicóloga General Sanitaria",
+      "telephone": "+34610576297",
+      "email": "bycpsicologia@gmail.com"
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schemaData);
+    document.head.appendChild(script);
+  </script>
+</body>
+</html>
