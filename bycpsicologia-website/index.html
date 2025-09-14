@@ -459,7 +459,13 @@
                 <label class="block text-sm font-medium text-gray-700 mb-2">Mensaje *</label>
                 <textarea name="mensaje" required rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
               </div>
-              <button type="submit" class="w-full bg-sage text-white py-3 px-6 rounded-lg font-medium hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all">
+              <div class="flex items-start space-x-3">
+                <input type="checkbox" id="privacy-checkbox" class="mt-1 h-4 w-4 text-sage border-gray-300 rounded focus:ring-sage focus:ring-2">
+                <label for="privacy-checkbox" class="text-sm text-gray-700">
+                  He leído y acepto la <a href="politica-privacidad.html" target="_blank" class="text-primary hover:text-sage underline">política de privacidad</a>
+                </label>
+              </div>
+              <button type="submit" id="submit-button" disabled class="w-full py-3 px-6 rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed bg-sage text-white hover:bg-primary">
                 Enviar mensaje
               </button>
             </form>
@@ -610,6 +616,33 @@
     script.type = 'application/ld+json';
     script.text = JSON.stringify(schemaData);
     document.head.appendChild(script);
+  </script>
+
+  <!-- JavaScript para checkbox de política de privacidad -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const privacyCheckbox = document.getElementById('privacy-checkbox');
+      const submitButton = document.getElementById('submit-button');
+
+      // Función para actualizar el estado del botón
+      function updateSubmitButton() {
+        if (privacyCheckbox.checked) {
+          submitButton.disabled = false;
+          submitButton.classList.remove('disabled:bg-gray-300', 'disabled:text-gray-500', 'disabled:cursor-not-allowed');
+          submitButton.classList.add('bg-sage', 'text-white', 'hover:bg-primary');
+        } else {
+          submitButton.disabled = true;
+          submitButton.classList.add('disabled:bg-gray-300', 'disabled:text-gray-500', 'disabled:cursor-not-allowed');
+          submitButton.classList.remove('bg-sage', 'text-white', 'hover:bg-primary');
+        }
+      }
+
+      // Escuchar cambios en el checkbox
+      privacyCheckbox.addEventListener('change', updateSubmitButton);
+
+      // Inicializar el estado del botón
+      updateSubmitButton();
+    });
   </script>
 </body>
 </html>
