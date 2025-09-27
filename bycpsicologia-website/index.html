@@ -442,7 +442,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div class="bg-white shadow-lg rounded-lg p-8">
             <h3 class="text-xl font-medium text-black mb-6">Formulario de contacto</h3>
-            <form class="space-y-4" action="mailto:bycpsicologia@gmail.com" method="post" enctype="text/plain">
+            <form id="contact-form" class="space-y-4" action="https://formspree.io/f/xvgwzbal" method="POST">
               <div>
                 <label class="block text-sm font-medium text-gray-700 mb-2">Nombre *</label>
                 <input type="text" name="nombre" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
@@ -465,10 +465,28 @@
                   He leído y acepto la <a href="politica-privacidad.html" target="_blank" class="text-primary hover:text-sage underline">política de privacidad</a>
                 </label>
               </div>
+
+              <!-- Campos ocultos de Formspree -->
+              <input type="hidden" name="_subject" value="Nueva consulta desde bycpsicologia.com">
+              <input type="hidden" name="_to" value="bycpsicologia@gmail.com">
+              <input type="hidden" name="_next" value="#success">
+
               <button type="submit" id="submit-button" disabled class="w-full py-3 px-6 rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed bg-sage text-white hover:bg-primary">
                 Enviar mensaje
               </button>
             </form>
+
+            <!-- Mensaje de confirmación superpuesto -->
+            <div id="success-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+              <div class="bg-white rounded-lg p-6 md:p-8 max-w-md w-full mx-4 text-center shadow-xl">
+                <div class="text-4xl md:text-5xl text-sage mb-4">✅</div>
+                <h3 class="text-xl md:text-2xl font-medium text-black mb-4 font-roboto">¡Mensaje enviado!</h3>
+                <p class="text-gray-600 mb-6 text-sm md:text-base">Me pondré en contacto contigo lo antes posible, gracias.</p>
+                <button id="close-overlay" class="bg-sage text-white px-6 py-2 rounded-lg hover:bg-primary transition-all font-medium">
+                  Cerrar
+                </button>
+              </div>
+            </div>
           </div>
           <div class="space-y-6">
             <div class="bg-white shadow-lg rounded-lg p-6">
@@ -642,6 +660,58 @@
 
       // Inicializar el estado del botón
       updateSubmitButton();
+
+      // Manejar envío del formulario
+      const contactForm = document.getElementById('contact-form');
+      const successOverlay = document.getElementById('success-overlay');
+      const closeOverlay = document.getElementById('close-overlay');
+
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Deshabilitar botón durante envío
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+
+        // Enviar formulario con fetch
+        fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            // Mostrar overlay de éxito
+            successOverlay.classList.remove('hidden');
+            // Resetear formulario
+            contactForm.reset();
+            // Resetear checkbox y botón
+            privacyCheckbox.checked = false;
+            updateSubmitButton();
+          } else {
+            throw new Error('Error en el envío');
+          }
+        }).catch(error => {
+          alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.');
+          console.error('Error:', error);
+        }).finally(() => {
+          // Restaurar botón
+          submitButton.textContent = 'Enviar mensaje';
+        });
+      });
+
+      // Cerrar overlay
+      closeOverlay.addEventListener('click', function() {
+        successOverlay.classList.add('hidden');
+      });
+
+      // Cerrar overlay al hacer clic fuera
+      successOverlay.addEventListener('click', function(e) {
+        if (e.target === successOverlay) {
+          successOverlay.classList.add('hidden');
+        }
+      });
     });
   </script>
 </body>
