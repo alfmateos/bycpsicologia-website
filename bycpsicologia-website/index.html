@@ -491,38 +491,61 @@
           <div class="space-y-6">
             <div class="bg-white shadow-lg rounded-lg p-6">
               <h3 class="text-xl font-medium text-black mb-4 font-roboto">Datos de contacto</h3>
-              <div class="space-y-3 font-roboto">
-                <div class="flex items-center">
-                  <span class="text-2xl mr-3">📞</span>
-                  <a href="tel:+34610576297" class="text-dark hover-primary transition-all">+34 610576297</a>
-                </div>
-                <div class="flex items-center">
-                  <span class="text-2xl mr-3">📧</span>
-                  <a href="mailto:bycpsicologia@gmail.com" class="text-dark hover-primary transition-all">bycpsicologia@gmail.com</a>
-                </div>
-                <div class="flex items-start">
-                  <span class="text-2xl mr-3 mt-1">📍</span>
-                  <div class="text-dark">
-                    <div class="font-medium">Dirección:</div>
-                    <div>MEDILOG</div>
-                    <div>Calle Arturo Soria 144</div>
-                    <div>28043 MADRID</div>
+
+              <!-- Layout responsive: una columna en móvil, dos columnas en desktop -->
+              <div class="flex flex-col md:flex-row md:gap-6">
+
+                <!-- Columna izquierda: Datos de contacto (ancho automático, solo lo necesario) -->
+                <div class="space-y-3 font-roboto md:flex-shrink-0">
+                  <div class="flex items-center">
+                    <span class="text-2xl mr-3">📞</span>
+                    <a href="tel:+34610576297" class="text-dark hover-primary transition-all">+34 610576297</a>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="text-2xl mr-3">📧</span>
+                    <a href="mailto:bycpsicologia@gmail.com" class="text-dark hover-primary transition-all">bycpsicologia@gmail.com</a>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-2xl mr-3 mt-1">📍</span>
+                    <div class="text-dark">
+                      <div class="font-medium">Dirección:</div>
+                      <div>MEDILOG</div>
+                      <div>Calle Arturo Soria 144</div>
+                      <div>28043 MADRID</div>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    <a href="https://www.linkedin.com/in/beatriz-corchado-93a913282/" target="_blank" rel="noopener noreferrer" class="text-dark hover-primary transition-all">LinkedIn</a>
+                  </div>
+                  <div class="flex items-center">
+                    <img src="/assets/icons/doctoralia.png" alt="Doctoralia" class="w-6 h-6 mr-3 object-contain">
+                    <a href="https://www.doctoralia.es/beatriz-corchado-de-frutos/psicologo/madrid" target="_blank" rel="noopener noreferrer" class="text-dark hover-primary transition-all">Doctoralia</a>
+                  </div>
+                  <div class="flex items-center">
+                    <img src="/assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6 mr-3">
+                    <a href="https://www.instagram.com/bycpsicologia/" target="_blank" rel="noopener noreferrer" class="text-dark hover-primary transition-all">Instagram</a>
                   </div>
                 </div>
-                <div class="flex items-center">
-                  <svg class="w-6 h-6 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                  <a href="https://www.linkedin.com/in/beatriz-corchado-93a913282/" target="_blank" rel="noopener noreferrer" class="text-dark hover-primary transition-all">LinkedIn</a>
+
+                <!-- Columna derecha: Mapa (ocupa todo el espacio restante) -->
+                <div class="mt-6 md:mt-0 md:flex-grow">
+                  <div class="rounded-lg overflow-hidden shadow-md">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.2847982!2d-3.6394!3d40.4378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCalle%20Arturo%20Soria%2C%20144%2C%2028043%20Madrid%2C%20Spain!5e0!3m2!1ses!2ses!4v1640000000000!5m2!1ses!2ses"
+                      width="100%"
+                      height="280"
+                      style="border:0;"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      title="Mapa - Calle Arturo Soria 144, Madrid">
+                    </iframe>
+                  </div>
                 </div>
-                <div class="flex items-center">
-                  <img src="/assets/icons/doctoralia.png" alt="Doctoralia" class="w-6 h-6 mr-3 object-contain">
-                  <a href="https://www.doctoralia.es/beatriz-corchado-de-frutos/psicologo/madrid" target="_blank" rel="noopener noreferrer" class="text-dark hover-primary transition-all">Doctoralia</a>
-                </div>
-                <div class="flex items-center">
-                  <img src="/assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6 mr-3">
-                  <a href="https://www.instagram.com/bycpsicologia/" target="_blank" rel="noopener noreferrer" class="text-dark hover-primary transition-all">Instagram</a>
-                </div>
+
               </div>
             </div>
           </div>
