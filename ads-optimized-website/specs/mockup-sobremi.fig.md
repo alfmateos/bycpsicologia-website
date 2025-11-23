@@ -17,10 +17,17 @@ Content:
   - Paragraph: "Antes de la psicología, mi gran vocación fue la maternidad. Tengo tres hijos jóvenes que me enseñaron que ser madre es una experiencia transformadora para la que nadie nos prepara realmente." 
   - Paragraph: "Hoy, mi propósito es escucharte, acompañarte y ayudarte a atravesar los cambios y dificultades que puedas estar experimentando."
   - Paragraph: "Trabajo desde un enfoque integrador, respetuoso y basado en la evidencia."
-  
-  - ButtonPrimary:
-      text: "Llámame"
-      href: "tel:+34610576297"
+  - Microcopy: "Cuando quieras, estoy disponible para escucharte."
+   - CTARow:
+      direction: "flex-col sm:flex-row"
+      gap: 12px
+      items:
+          - ButtonPrimary:
+              text: "Llamar"
+              href: "tel:+34610576297"
+          - ButtonSecondary:
+              text: "WhatsApp"
+              href: "https://wa.me/34610576297?text=Hola%20Beatriz%2C%20me%20gustaría%20más%20información"
 Theme:
   colors: use-existing
   fonts: use-existing
