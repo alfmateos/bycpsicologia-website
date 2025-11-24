@@ -23,6 +23,7 @@ Content:
             weight: "normal"
             font: "Roboto"
             tracking: "wide"
+            text-align: "center"
         - BulletList:
             gap: 16px
             items:

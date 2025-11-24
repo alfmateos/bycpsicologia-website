@@ -32,6 +32,7 @@ Layout:
     justify: flex-end
     padding-right: 48px
     max-width: full
+    content-max-width: "max-w-lg"
 Content:
   - RightColumn (desktop only):
       align: center

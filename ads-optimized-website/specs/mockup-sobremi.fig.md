@@ -26,12 +26,18 @@ Content:
   - Desktop: LeftColumn:
       Photo:
         source: existing
+        width: 500px
         height: 500px
-        shape: rounded-lg
+        shape: rounded-full
         shadow: lg
+      alignment: center
   - Desktop: RightColumn:
       Heading: "Sobre mí"
-  - Paragraph: "Soy Beatriz Corchado, psicóloga graduada por la UNED y Máster en Psicología General Sanitaria por la UNIR."
+      text-align: center
+      Paragraph: "Soy Beatriz Corchado, psicóloga graduada por la UNED y Máster en Psicología General Sanitaria por la UNIR."
+      CTA:
+        alignment: center
+        buttons: [Llamar, WhatsApp]
   - Paragraph: "Además poseo el título de Experto en Psicología Perinatal por la UNIR, Experto en Reducción del Estrés Basado en el Mindfulness (MBSR) y Experto en Orientación Psicológica e Intervención en Crisis en Niños y Adolescentes en Riesgo."
   - Paragraph: "Poseo experiencia en intervención en familias vulnerables, en situaciones de violencia y desarraigo y monoparentales."
   - Paragraph: "Antes de la psicología, mi gran vocación fue la maternidad. Tengo tres hijos jóvenes que me enseñaron que ser madre es una experiencia transformadora para la que nadie nos prepara realmente." 
