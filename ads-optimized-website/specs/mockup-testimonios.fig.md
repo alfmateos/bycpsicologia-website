@@ -13,7 +13,7 @@ Content:
         - Card:
             rating: 5
             stars: "★★★★★"
-            text: "Muy profesional y cercana. Me ayudó a manejar la ansiedad en el postparto desde la primera sesión."
+            text: "Muy profesional y cercana. Me ayudó a manejar la ansiedad en el postparto desde la primera sesión. Después de dar a luz, me sentía completamente desbordada y sin herramientas para gestionar mis emociones. Beatriz no solo me escuchó, sino que me enseñó técnicas prácticas que realmente funcionan. Hoy puedo decir que he recuperado mi bienestar y disfruto plenamente de la maternidad."
             author: "Patricia García, 33 años"
             topic: "Psicología perinatal"
         - Card:
@@ -25,7 +25,7 @@ Content:
         - Card:
             rating: 5
             stars: "★★★★★"
-            text: "Tras la pérdida de nuestro bebé, Beatriz nos ayudó a procesar el duelo como pareja. Su empatía y profesionalidad fueron fundamentales."
+            text: "Tras la pérdida de nuestro bebé, Beatriz nos ayudó a procesar el duelo como pareja. Su empatía y profesionalidad fueron fundamentales. Fue un momento muy oscuro en nuestras vidas, y no sabíamos cómo seguir adelante. Beatriz nos acompañó en cada paso, validando nuestro dolor y ayudándonos a encontrar significado en lo que habíamos vivido. Gracias a ella, pudimos sanar juntos y reconstruir nuestra relación."
             author: "Carlos Martínez, 38 años"
             topic: "Duelo gestacional y terapia de pareja"
         - Card:
@@ -37,7 +37,7 @@ Content:
         - Card:
             rating: 5
             stars: "★★★★★"
-            text: "Mi pareja y yo estábamos en crisis. Las sesiones de terapia de pareja con Beatriz nos ayudaron a comunicarnos mejor y recuperar la conexión."
+            text: "Mi pareja y yo estábamos en crisis. Las sesiones de terapia de pareja con Beatriz nos ayudaron a comunicarnos mejor y recuperar la conexión. Habíamos llegado a un punto donde apenas nos hablábamos, y la llegada de nuestro segundo hijo solo agravó la situación. Beatriz nos enseñó a escucharnos realmente, a expresar nuestras necesidades sin atacarnos, y a recordar por qué nos elegimos. Hoy nuestra relación es más fuerte que nunca."
             author: "Sofía y David Fernández, 40 y 41 años"
             topic: "Terapia de pareja"
         - Card:
