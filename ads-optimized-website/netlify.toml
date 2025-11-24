@@ -1,0 +1,18 @@
+[build]
+  command = "echo 'No build needed'"
+  publish = "."
+
+[context.production]
+  command = "echo 'Production build'"
+
+[context.deploy-preview]
+  command = "echo 'Deploy preview'"
+
+[context.branch-deploy]
+  command = "echo 'Branch deploy'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index-ads-optimized.html"
+  status = 200
+

@@ -1,16 +1,36 @@
 # mockup-sobremi.fig.md
 
 Frame: AboutSection
+Position: Second section (after Hero, before Para quién)
 Layout:
-  direction: vertical
-  padding: 24px
-  gap: 20px
+  mobile:
+    direction: vertical
+    padding: 24px
+    gap: 20px
+    align: center
+    background: white
+  desktop:
+    direction: horizontal
+    columns: 2
+    gap: 48px
+    align: center
+    max-width: 6xl
+    padding: 48px
+    background: white
 Content:
-  - Heading: "Sobre mí"
-  - Photo:
+  - Mobile: Heading: "Sobre mí"
+  - Mobile: Photo:
       source: existing
       maxWidth: 160px
-      shape: rounded
+      shape: rounded-full
+  - Desktop: LeftColumn:
+      Photo:
+        source: existing
+        height: 500px
+        shape: rounded-lg
+        shadow: lg
+  - Desktop: RightColumn:
+      Heading: "Sobre mí"
   - Paragraph: "Soy Beatriz Corchado, psicóloga graduada por la UNED y Máster en Psicología General Sanitaria por la UNIR."
   - Paragraph: "Además poseo el título de Experto en Psicología Perinatal por la UNIR, Experto en Reducción del Estrés Basado en el Mindfulness (MBSR) y Experto en Orientación Psicológica e Intervención en Crisis en Niños y Adolescentes en Riesgo."
   - Paragraph: "Poseo experiencia en intervención en familias vulnerables, en situaciones de violencia y desarraigo y monoparentales."

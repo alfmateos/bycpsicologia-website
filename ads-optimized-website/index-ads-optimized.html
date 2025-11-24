@@ -177,13 +177,43 @@
 
   <main class="pt-20">
     <!-- Hero Section -->
-    <section id="hero" class="py-12 md:py-20 px-4">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <!-- Columna izquierda: Imagen (solo en desktop) -->
-        <div class="hidden md:block bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('assets/images/hero-section-background.png'); height: 500px;"></div>
+    <section id="hero" class="pt-0 pb-12 md:pb-20 px-4 md:px-0">
+      <!-- Desktop: Fondo wide + contenido a la derecha -->
+      <div class="hidden md:block relative w-full" style="background-image: url('assets/images/hero-section-background-wide.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 700px;">
+        <div class="max-w-7xl mx-auto h-full flex items-center justify-end pr-12">
+          <div class="text-center space-y-6 max-w-md py-20">
+            <h1 class="text-4xl font-normal text-brown-dark leading-tight font-roboto tracking-wide">
+              Beatriz Corchado Psicología
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold text-sage">
+              Consulta en Madrid y Online
+            </h2>
+            <div class="space-y-4">
+              <p class="text-lg md:text-xl text-dark leading-relaxed">
+                Acompañamiento psicológico en maternidad, infertilidad, menopausia, cambios vitales y terapia familiar. Un espacio seguro para tu bienestar emocional.
+              </p>
+              <p class="text-lg md:text-xl text-dark leading-relaxed">
+                Si te encuentras en momentos de ansiedad, dudas, agotamiento emocional o duelo, juntas encontraremos recursos para que te sientas mejor.
+              </p>
+            </div>
+            <div class="space-y-2 text-sm md:text-base text-dark">
+              <p class="font-semibold">Cuéntame qué necesitas</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center pt-4">
+              <a href="tel:+34610576297" class="w-full sm:w-auto bg-sage text-white py-3 px-8 rounded-lg font-semibold hover:bg-primary transition-colors text-center">
+                Llamar ahora
+              </a>
+              <a href="https://wa.me/34610576297" target="_blank" class="w-full sm:w-auto border-2 border-sage text-sage py-3 px-8 rounded-lg font-semibold hover:bg-sage hover:text-white transition-colors text-center">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!-- Columna derecha: Contenido -->
-        <div class="text-center space-y-6">
+      <!-- Mobile: Contenido centrado con fondo -->
+      <div class="md:hidden">
+        <div class="max-w-7xl mx-auto text-center space-y-6">
           <h1 class="text-4xl font-normal text-brown-dark leading-tight font-roboto tracking-wide">
             Beatriz Corchado Psicología
           </h1>
@@ -215,7 +245,7 @@
       <!-- Fondo de imagen para móvil -->
       <style>
         @media (max-width: 768px) {
-          #hero {
+          #hero .md\:hidden {
             background-image: url('assets/images/hero-section-background.png');
             background-size: cover;
             background-position: center;
@@ -223,6 +253,94 @@
           }
         }
       </style>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="about" class="py-12 md:py-16 px-4 bg-white">
+      <!-- Mobile: Contenido centrado -->
+      <div class="md:hidden max-w-2xl mx-auto text-center">
+        <h2 class="text-4xl font-normal text-brown-dark mb-8 font-roboto tracking-wide">Sobre mí</h2>
+        <div class="mb-8 flex justify-center">
+          <img src="assets/images/byc-photo.png" alt="Beatriz Corchado" class="w-40 h-40 rounded-full object-cover shadow-md">
+        </div>
+        <div class="space-y-4 text-dark">
+          <p class="text-base leading-relaxed">
+            Soy Beatriz Corchado, psicóloga graduada por la UNED y Máster en Psicología General Sanitaria por la UNIR.
+          </p>
+          <p class="text-base leading-relaxed">
+            Además poseo el título de Experto en Psicología Perinatal por la UNIR, Experto en Reducción del Estrés Basado en el Mindfulness (MBSR) y Experto en Orientación Psicológica e Intervención en Crisis en Niños y Adolescentes en Riesgo.
+          </p>
+          <p class="text-base leading-relaxed">
+            Poseo experiencia en intervención en familias vulnerables, en situaciones de violencia y desarraigo y monoparentales.
+          </p>
+          <p class="text-base leading-relaxed">
+            Antes de la psicología, mi gran vocación fue la maternidad. Tengo tres hijos jóvenes que me enseñaron que ser madre es una experiencia transformadora para la que nadie nos prepara realmente.
+          </p>
+          <p class="text-base leading-relaxed">
+            Hoy, mi propósito es escucharte, acompañarte y ayudarte a atravesar los cambios y dificultades que puedas estar experimentando.
+          </p>
+          <p class="text-base leading-relaxed">
+            Trabajo desde un enfoque integrador, respetuoso y basado en la evidencia.
+          </p>
+        </div>
+        <div class="pt-6">
+          <p class="text-dark font-semibold mb-4">Cuando quieras, estoy disponible para escucharte.</p>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="tel:+34610576297" class="w-full sm:w-auto bg-sage text-white py-3 px-8 rounded-lg font-semibold hover:bg-primary transition-colors text-center">
+              Llamar
+            </a>
+            <a href="https://wa.me/34610576297?text=Hola%20Beatriz%2C%20me%20gustaría%20más%20información" target="_blank" class="w-full sm:w-auto border-2 border-sage text-sage py-3 px-8 rounded-lg font-semibold hover:bg-sage hover:text-white transition-colors text-center">
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop: Dos columnas (imagen izquierda, contenido derecha) -->
+      <div class="hidden md:block">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <!-- Columna izquierda: Imagen -->
+          <div class="rounded-lg overflow-hidden shadow-lg" style="height: 500px;">
+            <img src="assets/images/byc-photo.png" alt="Beatriz Corchado" class="w-full h-full object-cover">
+          </div>
+
+          <!-- Columna derecha: Contenido -->
+          <div class="space-y-6">
+            <h2 class="text-4xl font-normal text-brown-dark font-roboto tracking-wide">Sobre mí</h2>
+            <div class="space-y-4 text-dark">
+              <p class="text-base leading-relaxed">
+                Soy Beatriz Corchado, psicóloga graduada por la UNED y Máster en Psicología General Sanitaria por la UNIR.
+              </p>
+              <p class="text-base leading-relaxed">
+                Además poseo el título de Experto en Psicología Perinatal por la UNIR, Experto en Reducción del Estrés Basado en el Mindfulness (MBSR) y Experto en Orientación Psicológica e Intervención en Crisis en Niños y Adolescentes en Riesgo.
+              </p>
+              <p class="text-base leading-relaxed">
+                Poseo experiencia en intervención en familias vulnerables, en situaciones de violencia y desarraigo y monoparentales.
+              </p>
+              <p class="text-base leading-relaxed">
+                Antes de la psicología, mi gran vocación fue la maternidad. Tengo tres hijos jóvenes que me enseñaron que ser madre es una experiencia transformadora para la que nadie nos prepara realmente.
+              </p>
+              <p class="text-base leading-relaxed">
+                Hoy, mi propósito es escucharte, acompañarte y ayudarte a atravesar los cambios y dificultades que puedas estar experimentando.
+              </p>
+              <p class="text-base leading-relaxed">
+                Trabajo desde un enfoque integrador, respetuoso y basado en la evidencia.
+              </p>
+            </div>
+            <div class="pt-6">
+              <p class="text-dark font-semibold mb-4">Cuando quieras, estoy disponible para escucharte.</p>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a href="tel:+34610576297" class="w-full sm:w-auto bg-sage text-white py-3 px-8 rounded-lg font-semibold hover:bg-primary transition-colors text-center">
+                  Llamar
+                </a>
+                <a href="https://wa.me/34610576297?text=Hola%20Beatriz%2C%20me%20gustaría%20más%20información" target="_blank" class="w-full sm:w-auto border-2 border-sage text-sage py-3 px-8 rounded-lg font-semibold hover:bg-sage hover:text-white transition-colors text-center">
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ¿Para quién es este servicio? -->
@@ -307,47 +425,6 @@
         </div>
         <div class="text-center">
           <p class="text-dark font-semibold mb-4">Empecemos por una primera llamada sin compromiso.</p>
-          <div class="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="tel:+34610576297" class="w-full sm:w-auto bg-sage text-white py-3 px-8 rounded-lg font-semibold hover:bg-primary transition-colors text-center">
-              Llamar
-            </a>
-            <a href="https://wa.me/34610576297?text=Hola%20Beatriz%2C%20me%20gustaría%20más%20información" target="_blank" class="w-full sm:w-auto border-2 border-sage text-sage py-3 px-8 rounded-lg font-semibold hover:bg-sage hover:text-white transition-colors text-center">
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sobre mí -->
-    <section id="about" class="py-12 md:py-16 px-4 bg-white">
-      <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-4xl font-normal text-brown-dark mb-8 font-roboto tracking-wide">Sobre mí</h2>
-        <div class="mb-8 flex justify-center">
-          <img src="assets/images/byc-photo.png" alt="Beatriz Corchado" class="w-40 h-40 rounded-full object-cover shadow-md">
-        </div>
-        <div class="space-y-4 text-dark">
-          <p class="text-base leading-relaxed">
-            Soy Beatriz Corchado, psicóloga graduada por la UNED y Máster en Psicología General Sanitaria por la UNIR.
-          </p>
-          <p class="text-base leading-relaxed">
-            Además poseo el título de Experto en Psicología Perinatal por la UNIR, Experto en Reducción del Estrés Basado en el Mindfulness (MBSR) y Experto en Orientación Psicológica e Intervención en Crisis en Niños y Adolescentes en Riesgo.
-          </p>
-          <p class="text-base leading-relaxed">
-            Poseo experiencia en intervención en familias vulnerables, en situaciones de violencia y desarraigo y monoparentales.
-          </p>
-          <p class="text-base leading-relaxed">
-            Antes de la psicología, mi gran vocación fue la maternidad. Tengo tres hijos jóvenes que me enseñaron que ser madre es una experiencia transformadora para la que nadie nos prepara realmente.
-          </p>
-          <p class="text-base leading-relaxed">
-            Hoy, mi propósito es escucharte, acompañarte y ayudarte a atravesar los cambios y dificultades que puedas estar experimentando.
-          </p>
-          <p class="text-base leading-relaxed">
-            Trabajo desde un enfoque integrador, respetuoso y basado en la evidencia.
-          </p>
-        </div>
-        <div class="pt-6">
-          <p class="text-dark font-semibold mb-4">Cuando quieras, estoy disponible para escucharte.</p>
           <div class="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:+34610576297" class="w-full sm:w-auto bg-sage text-white py-3 px-8 rounded-lg font-semibold hover:bg-primary transition-colors text-center">
               Llamar

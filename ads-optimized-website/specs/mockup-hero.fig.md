@@ -5,7 +5,10 @@ Viewport: mobile-first and desktop
 Layout:
   mobile:
     direction: vertical
-    padding: 24px
+    padding-top: 0
+    padding-bottom: 24px
+    padding-left: 16px
+    padding-right: 16px
     gap: 16px
     align: center
     background:
@@ -15,22 +18,27 @@ Layout:
       repeat: "no-repeat"
   desktop:
     direction: horizontal
-    columns: 2
-    gap: 48px
+    padding-top: 0
+    padding-bottom: 48px
+    padding-left: 0
+    padding-right: 0
+    background:
+      image: "assets/images/hero-section-background-wide.png"
+      size: "cover"
+      position: "center"
+      repeat: "no-repeat"
+    min-height: 700px
     align: center
-    max-width: 7xl
-    container-padding: 16px
+    justify: flex-end
+    padding-right: 48px
+    max-width: full
 Content:
-  - LeftColumn (desktop only):
-      image:
-        src: "assets/images/hero-section-background.png"
-        height: 500px
-        border-radius: "8px"
-        background-size: "cover"
-        background-position: "center"
-  - RightColumn:
+  - RightColumn (desktop only):
       align: center
       gap: 24px
+      vertical-align: center
+      padding: 80px 0
+      max-width: 448px
       items:
         - H1:
             text: "Beatriz Corchado Psicología"
