@@ -179,7 +179,7 @@
     <!-- Hero Section -->
     <section id="hero" class="pt-0 pb-12 md:pb-20 px-4 md:px-0">
       <!-- Desktop: Fondo wide + contenido a la derecha -->
-      <div class="hidden md:block relative w-full" style="background-image: url('assets/images/hero-section-background-wide.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 700px;">
+      <div class="hidden md:block relative w-full" style="background-image: url('assets/images/hero-section-background-wide.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 700px;">
         <div class="max-w-7xl mx-auto h-full flex items-center justify-end pr-12">
           <div class="text-center space-y-6 max-w-lg py-20">
             <h1 class="text-4xl font-normal text-brown-dark leading-tight font-roboto tracking-wide">
@@ -302,7 +302,10 @@
           <!-- Columna izquierda: Imagen -->
           <div class="flex justify-center">
             <div class="rounded-full overflow-hidden shadow-lg" style="width: 500px; height: 500px;">
-              <img src="assets/images/byc-photo.png" alt="Beatriz Corchado" class="w-full h-full object-cover">
+              <picture>
+                <source srcset="assets/images/byc-photo.webp" type="image/webp">
+                <img src="assets/images/byc-photo.png" alt="Beatriz Corchado" class="w-full h-full object-cover">
+              </picture>
             </div>
           </div>
 
@@ -394,7 +397,10 @@
 
         <!-- Columna derecha: Imagen -->
         <div class="hidden md:block rounded-lg overflow-hidden shadow-lg" style="height: 500px;">
-          <img src="assets/images/mother-child-back.jpg" alt="Madre e hijo" class="w-full h-full object-cover">
+          <picture>
+            <source srcset="assets/images/mother-child-back.webp" type="image/webp">
+            <img src="assets/images/mother-child-back.jpg" alt="Madre e hijo" class="w-full h-full object-cover">
+          </picture>
         </div>
       </div>
     </section>
