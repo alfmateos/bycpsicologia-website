@@ -11,8 +11,3 @@
 [context.branch-deploy]
   command = "echo 'Branch deploy'"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
