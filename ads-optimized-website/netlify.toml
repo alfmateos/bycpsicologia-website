@@ -13,6 +13,6 @@
 
 [[redirects]]
   from = "/*"
-  to = "/index-ads-optimized.html"
+  to = "/index.html"
   status = 200
 
