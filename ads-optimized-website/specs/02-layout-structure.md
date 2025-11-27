@@ -1,85 +1,100 @@
 # 02-layout-structure.md
 
-## Estructura general
-Página mobile-first con diseño fluido para desktop.
+## Orden definitivo de secciones (mobile-first)
 
-Secciones en este orden:
+1. **Header compacto**
+   - Logo (misma imagen del proyecto original)
+   - Accesos rápidos: WhatsApp + Teléfono
+   - Sin redes sociales
+   - Sin menú
+   - Sin textos largos
 
-1. Header (logo + WhatsApp + teléfono)
-2. Hero cálido/emocional
-3. “Cuando la maternidad se hace pesada…”
-4. “¿Cómo puedo acompañarte?” (Servicios)
-5. Sobre mí
-6. Tarifas
-7. Testimonios
-8. Contacto (teléfono + WhatsApp + formulario)
-9. Barra flotante en móvil (WhatsApp + llamar)
+2. **HERO (orientado totalmente a la conversión)**
+   - Título claro profesional
+   - Subtítulo directo sobre especialización
+   - Credenciales sanitarias visibles
+   - CTA 1: Llamar ahora (primario)
+   - CTA 2: WhatsApp (secundario)
+   - Nota opcional: “Primera llamada informativa sin coste”
+   - Debajo: “Sesiones presenciales en Arturo Soria y online”
 
----
+3. **¿Para quién es este servicio?**
+   - Sección corta y decisiva.
+   - Lista de situaciones comunes:
+     - ansiedad embarazo o postparto,
+     - tristeza, culpa, desbordamiento,
+     - adaptación difícil a maternidad,
+     - problemas de sueño,
+     - duelo gestacional,
+     - conflictos de pareja.
+   - CTA breve: Llamar / WhatsApp
 
-## Header
-- Logo actual (izquierda)
-- Icono WhatsApp + icono teléfono (derecha)
-- Menú si existe, pero NO protagonista
+4. **Servicios (En qué puedo ayudarte)**
+   - 4 bloques tipo “card”, tailwind-friendly:
+     - Embarazo
+     - Postparto
+     - Duelo gestacional
+     - Terapia individual / pareja
+   - Cada card incluye título + descripción sanitaria y concisa.
 
----
+5. **Cómo son las sesiones**
+   - Explicación clara del proceso:
+     - Primera llamada gratuita informativa
+     - Duración sesiones: 55 min
+     - Modalidad: online o presencial en Arturo Soria
+     - Enfoque personalizado
+     - Herramientas prácticas para el día a día
+   - CTA discreto: “Reservar llamada”
 
-## Hero
-- Frase emocional
-- H1 fuerte
-- Subtítulo
-- Credenciales
-- Botones:
-  - Hablar contigo ahora (tel:)
-  - WhatsApp directo (wa.me)
+6. **Sobre mí (versión optimizada breve)**
+   - Foto circular (misma del proyecto)
+   - Título: “Sobre mí”
+   - Texto conciso profesional:
+     - Psicóloga Sanitaria especializada en maternidad y salud perinatal.
+     - Enfoque basado en evidencia, cercano y respetuoso.
+   - Credenciales:
+     - Psicóloga Sanitaria M-40164
+     - Especialista en salud perinatal
+     - Atención presencial y online
 
----
+7. **Testimonios**
+   - 2–3 opiniones breves verificadas.
+   - Formato card o bloque simple.
 
-## Sección "Cuando la maternidad se hace pesada…"
-- Título H2
-- Bullets empáticos
-- CTA pequeño opcional
+8. **Tarifas claras**
+   - Sesión individual: 60 €
+   - Sesión de pareja: 70 €
+   - Nota: “Si no sabes qué tipo de sesión necesitas, lo vemos juntas en la llamada gratuita.”
+   - CTA: Llamar ahora
 
----
+9. **Contacto directo**
+   - Teléfono
+   - WhatsApp
+   - Formulario (nombre, email, mensaje)
+   - Política de datos
+   - Mapa (mismo iframe que index.html)
 
-## Servicios
-- Título H2
-- 4 bloques:
-  - Embarazo
-  - Postparto
-  - Duelo gestacional
-  - Individual/pareja
+10. **Barra flotante (solo móvil)**
+    - Botón “Llamar”
+    - Botón “WhatsApp”
+    - Siempre visible (CSS fixed)
+    - Nunca usar JS para fijarla
 
----
+## Elementos que deben integrarse desde index.html original
 
-## Sobre mí
-- Título H2
-- Foto
-- Texto cálido
-- Credenciales
+### Mapa
+- Colocar debajo del formulario de contacto.
+- Usar el MISMO iframe o código exacto de index.html.
+- No cargar Google Maps API nueva.
 
----
+### Redes profesionales
+- Solo en el footer:
+  - Instagram
+  - Doctoralia
+  - LinkedIn
+- Iconos discretos (24px)
+- Sin textos largos
 
-## Tarifas
-- Título H2
-- 60€ / 70€
-
----
-
-## Testimonios
-- 2–3 testimonios breves
-
----
-
-## Contacto
-- Teléfono + WhatsApp en texto
-- Formulario simple:
-  - Nombre / Email / Mensaje
-
----
-
-## Barra flotante móvil
-- Botón llamar
-- Botón WhatsApp
-- Siempre visible
-
+### Formulario POST (backend existente)
+El formulario debe usar **el mismo endpoint POST y los mismos field names que index.html**
+para asegurar compatibilidad con el backend actual.

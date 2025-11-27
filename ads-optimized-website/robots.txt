@@ -1,0 +1,12 @@
+# Robots.txt para Beatriz Corchado Psicología
+User-agent: *
+Allow: /
+Disallow: /specs/
+Disallow: /assets/
+
+# Sitemap
+Sitemap: https://bycpsicologia.com/sitemap.xml
+
+# Crawl delay (opcional, en segundos)
+Crawl-delay: 1
+
