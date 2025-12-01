@@ -1,13 +1,17 @@
+redirectsOrigin = "config"
 plugins = []
-redirects = []
+headers = []
 
 [functions]
 
 [functions."*"]
 
 [build]
-publish = "/Users/alfonso/bycpsicologia"
-publishOrigin = "default"
+publish = "/Users/alfonso/bycpsicologia/ads-optimized-website"
+publishOrigin = "config"
+commandOrigin = "config"
+base = "/Users/alfonso/bycpsicologia/ads-optimized-website"
+command = "echo 'Production build'"
 
 [build.environment]
 
@@ -23,9 +27,14 @@ publishOrigin = "default"
 
 [build.services]
 
-[[headers]]
-for = "/*"
+[[redirects]]
+from = "/*"
+to = "/index-ads-optimized.html"
+status = 200.0
+force = false
 
-[headers.values]
-X-Frame-Options = "DENY"
-X-Content-Type-Options = "nosniff"
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
